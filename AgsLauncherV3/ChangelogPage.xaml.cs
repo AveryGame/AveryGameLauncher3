@@ -20,7 +20,20 @@ namespace AgsLauncherV3
     {
         public ChangelogPage()
         {
+            HomePage mw = new HomePage();
             InitializeComponent();
+            this.ShowsNavigationUI = false;
+            mw.Content = new UserControl();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            HomePage hp = new HomePage();
+            this.ShowsNavigationUI = false;
+            MainWindow bootStrapper = new MainWindow();
+            bootStrapper.RemoveLogicalChildOnWindowLoad();
+            this.NavigationService.Navigate(hp);
+            
         }
     }
 }

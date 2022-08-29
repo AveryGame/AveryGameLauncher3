@@ -23,12 +23,19 @@ namespace AgsLauncherV3
         public MainWindow()
         {
             InitializeComponent();
+            HomePage hp = new HomePage();
+            this.Height = 450;
+            this.Width = 800;
+            bootStrapperHost.Content = hp;
+
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public void RemoveLogicalChildOnWindowLoad()
         {
-            ChangelogPage bussy = new ChangelogPage();
-            balls.NavigationService.Navigate(bussy);
+            HomePage hp = new HomePage();
+            this.RemoveLogicalChild(hp);
+            ChangelogPage clp = new ChangelogPage();
+            this.RemoveLogicalChild(clp);
         }
     }
 }

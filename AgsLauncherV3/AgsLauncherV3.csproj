@@ -4,6 +4,15 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
+    <StartupObject>AgsLauncherV3.App</StartupObject>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="AveryGameLauncher3-Load.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="AveryGameLauncher3-Load.gif" />
+  </ItemGroup>
 
 </Project>

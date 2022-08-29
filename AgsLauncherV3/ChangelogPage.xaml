@@ -9,8 +9,9 @@
       Title="ChangelogPage">
 
     <Grid Background="#FF171717">
-        <Frame x:Name="wowzer"/>
-        <Label Content="true" HorizontalAlignment="Left" Margin="307,0,0,0" VerticalAlignment="Center" Foreground="White"/>
-
+        <Border Background="#FF171717" BorderBrush="#FF171717" CornerRadius="9999"/>
+        <Frame x:Name="wowzer" NavigationUIVisibility="Hidden"/>
+        <Label Content="changelog page" HorizontalAlignment="Left" Margin="411,142,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Button Content="Change window" HorizontalAlignment="Left" Margin="154,174,0,0" VerticalAlignment="Top" Click="Button_Click"/>
     </Grid>
 </Page>
