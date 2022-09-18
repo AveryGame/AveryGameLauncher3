@@ -8,11 +8,25 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="AveryGameLauncher3-Load.gif" />
+      <None Remove="AveryGameLauncher3-Load.gif" />
+	  <None Remove="LauncherIMG/Exit.gif" />
+	  <None Remove="LauncherIMG/Cover.gif" />
+	  <None Remove="LauncherIMG/Full.gif" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="AveryGameLauncher3-Load.gif" />
+    <PackageReference Include="XamlAnimatedGif" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+      <Resource Include="AveryGameLauncher3-Load.gif" />
+	  <Resource Include="LauncherIMG/Exit.gif" />
+	  <Resource Include="LauncherIMG/Cover.gif" />
+	  <Resource Include="LauncherIMG/Full.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="LauncherIMG\" />
   </ItemGroup>
 
 </Project>

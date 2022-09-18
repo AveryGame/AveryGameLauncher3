@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Oh4Zxw759HmEwgcIB0Q1VFqRZprn/rUGLflnO9J6WDUjWFHhCuJ2TYyR8Wfb7yLe3aSgks+E5wgVnCMMNxaqVA==",
+  "dgSpecHash": "tF/nKf6NABlgD/fQ85/WmIyBhEL+YcIyKBXZN3uF+bZO12aGvyTKhKGy1Xt9onPwxppj5sIhZEWqg/ySndTjaA==",
   "success": true,
   "projectFilePath": "C:\\Users\\shawn\\OneDrive\\Documents\\Visual Studio Projects\\ags-launcher-v3\\AgsLauncherV3\\AgsLauncherV3\\AgsLauncherV3.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\shawn\\.nuget\\packages\\xamlanimatedgif\\2.0.2\\xamlanimatedgif.2.0.2.nupkg.sha512",
     "C:\\Users\\shawn\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.26\\microsoft.netcore.app.host.win-x64.3.1.26.nupkg.sha512"
   ],
   "logs": []
