@@ -8,6 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+      <None Remove=".Logo.png" />
+      <None Remove=".Logo.Resize.png" />
+      <None Remove=".PunchOut.png" />
+      <None Remove=".Refactor.png" />
+      <None Remove=".Trim.png" />
+      <None Remove="2v2UpdateBase.png" />
       <None Remove="AveryGameLauncher3-Load.gif" />
 	  <None Remove="LauncherIMG/Exit.gif" />
 	  <None Remove="LauncherIMG/Cover.gif" />
@@ -19,6 +25,12 @@
   </ItemGroup>
 
   <ItemGroup>
+      <Resource Include=".Logo.png" />
+      <Resource Include=".Logo.Resize.png" />
+      <Resource Include=".PunchOut.png" />
+      <Resource Include=".Refactor.png" />
+      <Resource Include=".Trim.png" />
+      <Resource Include="2v2UpdateBase.png" />
       <Resource Include="AveryGameLauncher3-Load.gif" />
 	  <Resource Include="LauncherIMG/Exit.gif" />
 	  <Resource Include="LauncherIMG/Cover.gif" />

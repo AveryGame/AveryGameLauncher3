@@ -9,15 +9,14 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ChangelogPage">
 
-    <Grid Background="#FF171717">
-        <Border Background="#FF171717" BorderBrush="#FF171717" CornerRadius="9999"/>
+    <Grid Background="#383838">
+        <Border Background="#FF171717" BorderBrush="#FF171717" CornerRadius="0" Margin="0,0,0,285"/>
+        <Image Margin="0,0,0,285" Source="/.Trim.png" Stretch="UniformToFill"/>
         <Grid Name="contentHost" Opacity="1" Margin="0, 0, 0, 0">
-            <Frame x:Name="wowz2" NavigationUIVisibility="Hidden"/>
-            <Label Name="hpName" Content="homepage" HorizontalAlignment="Left" Margin="297,0,0,0" VerticalAlignment="Center" Foreground="White"/>
-            <Button Name="windowChange" Content="Change window" HorizontalAlignment="Left" Margin="154,174,0,0" VerticalAlignment="Top" Click="Button_Click" Width="100" Height="20" MouseEnter="windowChange_MouseEnter" MouseLeave="windowChange_MouseLeave"/>
-            <Image Margin="0,0,0,0"/>
-            <Image Name="GifObject" gif:AnimationBehavior.SourceUri=""
-                   gif:AnimationBehavior.RepeatBehavior="1x" Margin="-112,-273,-112,-299" Opacity="0"/>
+            <Frame x:Name="wowz2" NavigationUIVisibility="Hidden" Margin="0,172,0,0"/>
+            <Border BorderBrush="#262626" BorderThickness="1" HorizontalAlignment="Left" Height="330" Margin="24,100,0,0" VerticalAlignment="Top" Width="169" CornerRadius="9" Background="#262626"/>
+
         </Grid>
+        <Image Source="/.PunchOut.png" Margin="24,24,604,394" RenderOptions.BitmapScalingMode="Fant" Stretch="UniformToFill"/>
     </Grid>
 </Page>

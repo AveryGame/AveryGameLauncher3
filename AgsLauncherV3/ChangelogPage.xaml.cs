@@ -49,7 +49,7 @@ namespace AgsLauncherV3
             thicknessAnim.Children.Remove(contenthostMargin);*/
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
             var b = contentHost;
             var fade = new DoubleAnimation()
@@ -63,6 +63,7 @@ namespace AgsLauncherV3
             var sb = new Storyboard();
             sb.Children.Add(fade);
             sb.Begin();
+            await System.Threading.Tasks.Task.Delay(150);
             HomePage hp = new HomePage();
             this.ShowsNavigationUI = false;
             MainWindow bootStrapper = new MainWindow();

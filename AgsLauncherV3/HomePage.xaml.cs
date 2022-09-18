@@ -53,6 +53,7 @@ namespace AgsLauncherV3
             var sb = new Storyboard();
             sb.Children.Add(fade);
             sb.Begin();
+            await Delay(150);
             /*ThicknessAnimation contenthostMargin = new ThicknessAnimation();
             contenthostMargin.From = new Thickness(0, 0, 0, 0);
             contenthostMargin.To = new Thickness(900, 0, -900, 0);
@@ -70,27 +71,7 @@ namespace AgsLauncherV3
             this.RemoveLogicalChild(this.wowz2);
             Console.WriteLine("Removed logical child - calling new page.");
             bootStrapper.RemoveLogicalChildOnWindowLoad();
-            await Delay(150);
             this.NavigationService.Navigate(clp);
-        }
-
-        private async void windowChange_MouseEnter(object sender, MouseEventArgs e)
-        {
-            int width = 103;
-            int height = 21;
-            for (int i = 0; i > 500; i++)
-            {
-                windowChange.Width = width;
-                windowChange.Height = height;
-                width = width + 3;
-                height = height + 1;
-                await Delay(25);
-            }
-        }
-
-        private void windowChange_MouseLeave(object sender, MouseEventArgs e)
-        {
-
         }
     }
 }
