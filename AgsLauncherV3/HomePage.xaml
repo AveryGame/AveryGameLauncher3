@@ -11,12 +11,19 @@
 
     <Grid Background="#383838">
         <Border Background="#FF171717" BorderBrush="#FF171717" CornerRadius="0" Margin="0,0,0,285"/>
-        <Image Margin="0,0,0,285" Source="/.Trim.png" Stretch="UniformToFill"/>
+        <Image Margin="0,0,0,285" Source="/Data/.Trim.png" Stretch="UniformToFill"/>
         <Grid Name="contentHost" Opacity="1" Margin="0, 0, 0, 0">
             <Frame x:Name="wowz2" NavigationUIVisibility="Hidden" Margin="0,172,0,0"/>
-            <Border BorderBrush="#262626" BorderThickness="1" HorizontalAlignment="Left" Height="330" Margin="24,100,0,0" VerticalAlignment="Top" Width="169" CornerRadius="9" Background="#262626"/>
+            <Border BorderBrush="#262626" BorderThickness="1" HorizontalAlignment="Left" Height="330" Margin="24,100,0,0" VerticalAlignment="Top" Width="169" CornerRadius="9" Background="#262626">
+            </Border>
+            <Border Name="libraryHighlight" BorderThickness="1" HorizontalAlignment="Left" Height="26" Margin="30,110,0,0" VerticalAlignment="Top" Width="157" Background="#FFd91c5c" BorderBrush="#FFd91c5c" CornerRadius="7" Opacity="0"/>
+            <TextBlock Margin="30,110,613,310" TextWrapping="Wrap" Text="L I B R A R Y" Foreground="#FFC5C5C5" FontFamily="Segoe UI Variable Display Light" FontSize="18" HorizontalAlignment="Center" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave"/>
+            <Image Source="/Data/AveryGameLauncher3-LibraryIcon.png" Margin="34,110,736,314" RenderOptions.BitmapScalingMode="Fant"/>
+
+
 
         </Grid>
-        <Image Source="/.PunchOut.png" Margin="24,24,604,394" RenderOptions.BitmapScalingMode="Fant" Stretch="UniformToFill"/>
+        <Image Source="/Data/.PunchOut.png" Margin="24,24,604,394" RenderOptions.BitmapScalingMode="Fant" Stretch="UniformToFill"/>
+        <Border Margin="0,0,607,312" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" MouseDown="Button_Click" Background="#00000000" HorizontalAlignment="Right" Width="169" Height="28" VerticalAlignment="Bottom"/>
     </Grid>
 </Page>

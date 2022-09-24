@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AgsLauncherV3": {
+      "commandName": "Project",
+      "commandLineArgs": "--devrunnerstate.1"
+    }
+  }
+}

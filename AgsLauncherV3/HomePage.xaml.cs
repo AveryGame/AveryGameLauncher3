@@ -24,54 +24,27 @@ namespace AgsLauncherV3
         public HomePage()
         {
             InitializeComponent();
-            this.ShowsNavigationUI = false;
-            var b = contentHost;
-            var fade = new DoubleAnimation()
-            {
-                From = 0,
-                To = 1,
-                Duration = TimeSpan.FromSeconds(0.15),
-            };
-            Storyboard.SetTarget(fade, b);
-            Storyboard.SetTargetProperty(fade, new PropertyPath(Button.OpacityProperty));
-            var sb = new Storyboard();
-            sb.Children.Add(fade);
-            sb.Begin();
+            Services.AnimationHandler.FadeIn(contentHost);
+            Delay(150);
+            Console.WriteLine("Loaded all page components and finished animation.");
         }
 
-        private async void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, MouseButtonEventArgs e)
         {
-            var b = contentHost;
-            var fade = new DoubleAnimation()
-            {
-                From = 1,
-                To = 0,
-                Duration = TimeSpan.FromSeconds(0.15),
-            };
-            Storyboard.SetTarget(fade, b);
-            Storyboard.SetTargetProperty(fade, new PropertyPath(Button.OpacityProperty));
-            var sb = new Storyboard();
-            sb.Children.Add(fade);
-            sb.Begin();
+            Services.AnimationHandler.FadeOut(contentHost);
             await Delay(150);
-            /*ThicknessAnimation contenthostMargin = new ThicknessAnimation();
-            contenthostMargin.From = new Thickness(0, 0, 0, 0);
-            contenthostMargin.To = new Thickness(900, 0, -900, 0);
-            contenthostMargin.Duration = TimeSpan.FromSeconds(0.15);
-            contenthostMargin.FillBehavior = FillBehavior.HoldEnd;
-            var thicknessAnim = new Storyboard();
-            Storyboard.SetTargetName(contenthostMargin, "contentHost");
-            Storyboard.SetTargetProperty(contenthostMargin, new PropertyPath(Grid.MarginProperty));
-            thicknessAnim.Children.Add(contenthostMargin);
-            thicknessAnim.Begin(this);
-            thicknessAnim.Children.Remove(contenthostMargin);*/
             ChangelogPage clp = new ChangelogPage();
-            this.ShowsNavigationUI = false;
-            MainWindow bootStrapper = new MainWindow();
-            this.RemoveLogicalChild(this.wowz2);
-            Console.WriteLine("Removed logical child - calling new page.");
-            bootStrapper.RemoveLogicalChildOnWindowLoad();
             this.NavigationService.Navigate(clp);
+        }
+
+        private void TextBlock_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Services.AnimationHandler.FadeIn(libraryHighlight);
+        }
+
+        private void TextBlock_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Services.AnimationHandler.FadeOut(libraryHighlight);
         }
     }
 }

@@ -65,7 +65,6 @@ namespace AgsLauncherV3
             sb.Begin();
             await System.Threading.Tasks.Task.Delay(150);
             HomePage hp = new HomePage();
-            this.ShowsNavigationUI = false;
             MainWindow bootStrapper = new MainWindow();
             bootStrapper.RemoveLogicalChildOnWindowLoad();
             this.NavigationService.Navigate(hp);
