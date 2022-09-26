@@ -21,6 +21,7 @@ namespace AgsLauncherV3
         public static extern void FreeConsole();
 
         string PATH = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\AveryGame\\AveryGameLauncher3";
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -29,6 +30,8 @@ namespace AgsLauncherV3
                 AllocConsole();
                 Console.WriteLine("AveryGameLauncher3.App//Hana..Bootstrap() -- Allocated console at " + DateTime.Now.ToString());
             }
+            Services.Enums.status = Services.Enums.LauncherStatus.initializing;
+            Services.RichPresenceService.Handler();
             HomePage hp = new HomePage();
             this.Height = 450;
             this.Width = 800;
@@ -39,26 +42,6 @@ namespace AgsLauncherV3
                 Directory.CreateDirectory(PATH);
                 File.WriteAllText(PATH + "\\PATH", Assembly.GetExecutingAssembly().Location.Replace(".dll", ".exe").ToString());
             }
-        }
-
-        private static bool RunElevated(string fileName)
-        {
-            //MessageBox.Show("Run: " + fileName);
-            ProcessStartInfo processInfo = new ProcessStartInfo();
-            processInfo.UseShellExecute = true;
-            processInfo.Verb = "runas";
-            processInfo.FileName = fileName;
-            try
-            {
-                MessageBox.Show("The AveryGame launcher needs to acquire administrative rights to finish the first-time setup.");
-                Process.Start(processInfo);
-                return true;
-            }
-            catch (Win32Exception)
-            {
-                //Do nothing. Probably the user canceled the UAC window
-            }
-            return false;
         }
         public void RemoveLogicalChildOnWindowLoad()
         {

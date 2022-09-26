@@ -44,9 +44,13 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "DiscordRichPresence": {
+              "target": "Package",
+              "version": "[1.0.175, )"
+            },
             "XamlAnimatedGif": {
               "target": "Package",
-              "version": "[2.0.2, )"
+              "version": "[2.0.3, )"
             }
           },
           "imports": [

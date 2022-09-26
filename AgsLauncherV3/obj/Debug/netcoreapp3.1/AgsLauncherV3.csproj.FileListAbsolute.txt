@@ -24,3 +24,5 @@ C:\Users\shawn\OneDrive\Documents\Visual Studio Projects\ags-launcher-v3\AgsLaun
 C:\Users\shawn\OneDrive\Documents\Visual Studio Projects\ags-launcher-v3\AgsLauncherV3\AgsLauncherV3\obj\Debug\netcoreapp3.1\AgsLauncherV3.dll
 C:\Users\shawn\OneDrive\Documents\Visual Studio Projects\ags-launcher-v3\AgsLauncherV3\AgsLauncherV3\obj\Debug\netcoreapp3.1\AgsLauncherV3.pdb
 C:\Users\shawn\OneDrive\Documents\Visual Studio Projects\ags-launcher-v3\AgsLauncherV3\AgsLauncherV3\obj\Debug\netcoreapp3.1\AgsLauncherV3.genruntimeconfig.cache
+C:\Users\shawn\OneDrive\Documents\Visual Studio Projects\ags-launcher-v3\AgsLauncherV3\AgsLauncherV3\bin\Debug\netcoreapp3.1\DiscordRPC.dll
+C:\Users\shawn\OneDrive\Documents\Visual Studio Projects\ags-launcher-v3\AgsLauncherV3\AgsLauncherV3\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
