@@ -47,6 +47,7 @@ namespace AgsLauncherV3
             loaderHost.Opacity = 1;
             await Delay(2000);
             userImage.ImageSource = new BitmapImage(new Uri(Services.RichPresenceService.client.CurrentUser.GetAvatarURL(User.AvatarFormat.PNG, User.AvatarSize.x128)));
+            userWelcome.Text = "Welcome, " + Services.RichPresenceService.client.CurrentUser.Username + "!";
             Services.AnimationHandler.FadeOut(loaderHost);
             await Delay(150);
             loaderHost.Margin = new Thickness(69420, 69420, 69420, 69420);
