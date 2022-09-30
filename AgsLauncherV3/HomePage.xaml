@@ -17,7 +17,7 @@
             <Border BorderBrush="#262626" BorderThickness="1" HorizontalAlignment="Left" Height="330" Margin="24,100,0,0" VerticalAlignment="Top" Width="169" CornerRadius="9" Background="#262626">
             </Border>
             <Border Name="libraryHighlight" BorderThickness="1" HorizontalAlignment="Left" Height="26" Margin="30,110,0,0" VerticalAlignment="Top" Width="157" Background="#FFd91c5c" BorderBrush="#FFd91c5c" CornerRadius="7" Opacity="0"/>
-            <TextBlock Margin="30,110,613,310" TextWrapping="Wrap" Text="L I B R A R Y" Foreground="#FFC5C5C5" FontFamily="Segoe UI Variable Display Light" FontSize="18" HorizontalAlignment="Center" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave"/>
+            <TextBlock Name="libraryButton" Margin="30,110,613,310" TextWrapping="Wrap" Text="libraryButton" Foreground="#FFC5C5C5" FontFamily="Segoe UI Variable Display Light" FontSize="18" HorizontalAlignment="Center" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave"/>
             <Image Source="/Data/AveryGameLauncher3-LibraryIcon.png" Margin="34,110,736,314" RenderOptions.BitmapScalingMode="Fant"/>
             <Grid Name="libraryCatalogHost" Margin="218,100,23,20">
                 <Border Name="libraryCatalogBackground" BorderBrush="#FF262626" BorderThickness="1" Background="#FF262626" CornerRadius="9"/>
@@ -31,7 +31,7 @@
         <Border Margin="0,0,607,312" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" MouseDown="Button_Click" Background="#00000000" HorizontalAlignment="Right" Width="169" Height="28" VerticalAlignment="Bottom"/>
         <Border x:Name="userImageHost" HorizontalAlignment="Left" Height="56" Margin="716,22,0,0" VerticalAlignment="Top" Width="56" CornerRadius="899,899,899,899">
             <Border.Background>
-                <ImageBrush x:Name="userImage" Stretch="Fill" ImageSource="/AveryGameLauncher3-ProfileImageDefault.png" RenderOptions.BitmapScalingMode="Fant"/>
+                <ImageBrush x:Name="userImage" Stretch="Fill" ImageSource="Data/AveryGameLauncher3-ProfileImageDefault.png" RenderOptions.BitmapScalingMode="Fant"/>
             </Border.Background>
         </Border>
         <Grid Name="loaderHost" Opacity="0" Margin="69420, 69420, 69420, 69420">
@@ -39,7 +39,7 @@
             <Image gif:AnimationBehavior.SourceUri="Data/AveryGameLauncher3-Load.gif"/>
         </Grid>
         <Grid/>
-        <TextBlock Name="userWelcome" HorizontalAlignment="Left" Margin="223,37,0,0" TextWrapping="Wrap" Text="Welcome to the AveryGame launcher!" VerticalAlignment="Top" Width="477" Height="26" TextAlignment="Right" Foreground="#FFC7C7C7" FontSize="20" FontFamily="Trebuchet MS" FontWeight="Normal" FontStyle="Normal" TextDecorations="{x:Null}">
+        <TextBlock Name="userWelcome" HorizontalAlignment="Left" Margin="223,37,0,0" TextWrapping="Wrap" Text="userWelcome" VerticalAlignment="Top" Width="477" Height="26" TextAlignment="Right" Foreground="#FFC7C7C7" FontSize="20" FontFamily="Trebuchet MS" FontWeight="Normal" FontStyle="Normal" TextDecorations="{x:Null}">
         </TextBlock>
     </Grid>
 </Page>

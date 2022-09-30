@@ -12,5 +12,17 @@ namespace AgsLauncherV3.Services
             rpcInitialized
         }
         public static LauncherStatus status;
+        
+        public enum LocalizedLanguage
+        {
+            english,
+            spanish,
+            italian,
+            french,
+            japanese,
+            chinese,
+            arabic
+        }
+        public static LocalizedLanguage languageSetting;
     }
 }

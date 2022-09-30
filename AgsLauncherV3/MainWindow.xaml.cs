@@ -31,7 +31,7 @@ namespace AgsLauncherV3
                 Console.WriteLine("AveryGameLauncher3.App//Hana..Bootstrap() -- Allocated console at " + DateTime.Now.ToString());
             }
             Services.Enums.status = Services.Enums.LauncherStatus.initializing;
-            Services.RichPresenceService.Handler();
+           // Services.RichPresenceService.Handler();
             HomePage hp = new HomePage();
             this.Height = 450;
             this.Width = 800;

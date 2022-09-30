@@ -21,7 +21,7 @@
   </ItemGroup>
 
 	<ItemGroup>
-		<Resource Include="AveryGameLauncher3-ProfileImageDefault.png" />
+		<Resource Include="Data\AveryGameLauncher3-ProfileImageDefault.png" />
 		<Resource Include="Data\.PunchOut.png" />
 		<Resource Include="Data\.Trim.png" />
 		<Resource Include="Data\AveryGameLauncher3-LibraryIcon.png" />

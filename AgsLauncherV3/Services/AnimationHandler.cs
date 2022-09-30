@@ -39,5 +39,21 @@ namespace AgsLauncherV3.Services
             sb.Children.Add(fade);
             sb.Begin();
         }
+
+        public static void MovementAnimation(DependencyObject targetObject, double time, Thickness from, Thickness to)
+        {
+            var b = targetObject;
+            var fade = new ThicknessAnimation()
+            {
+                From = from,
+                To = to,
+                Duration = TimeSpan.FromSeconds(time),
+            };
+            Storyboard.SetTarget(fade, b);
+            Storyboard.SetTargetProperty(fade, new PropertyPath(Button.MarginProperty));
+            var sb = new Storyboard();
+            sb.Children.Add(fade);
+            sb.Begin();
+        }
     }
 }
