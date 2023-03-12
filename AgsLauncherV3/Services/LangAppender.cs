@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using static AgsLauncherV3.Services.Enums;
+using static AveryGameLauncher3.Services.Enums;
 
-namespace AgsLauncherV3.Services
+namespace AveryGameLauncher3.Services
 {
     internal class jsonFields
     {
@@ -19,7 +19,6 @@ namespace AgsLauncherV3.Services
             HomePage hp = new HomePage();
             string languageData = File.ReadAllText("root/lang/" + language + ".json");
             jsonFields lang = JsonConvert.DeserializeObject<jsonFields>(languageData);
-            hp.libraryButton.Text = lang.libraryButton;
         }
         public static void AppendRPCWelcome(string rpcName, LocalizedLanguage language)
         {

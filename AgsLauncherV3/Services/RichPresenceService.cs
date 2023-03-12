@@ -1,9 +1,10 @@
 ﻿using System;
+using System.Windows;
 using DiscordRPC;
 using DiscordRPC.Message;
 using DiscordRPC.Logging;
 
-namespace AgsLauncherV3.Services
+namespace AveryGameLauncher3.Services
 {
     internal class RichPresenceService
     {
@@ -13,13 +14,19 @@ namespace AgsLauncherV3.Services
             Console.WriteLine("Loaded all page components and finished animation.");
             client = new DiscordRpcClient("1023932512612925501");
             client.Logger = new ConsoleLogger() { Level = LogLevel.Warning };
-            client.OnReady += (sender, e) =>
+            client.OnReady += (sender, msg) =>
             {
-                Console.WriteLine("[LOGRPC]: Received Ready from user {0}", e.User.Username);
+                Application.Current.Dispatcher.Invoke(OnRichPresenceConnectionSuccess, System.Windows.Threading.DispatcherPriority.ContextIdle);
+                PfpUrl = client.CurrentUser.GetAvatarURL(User.AvatarFormat.PNG, User.AvatarSize.x32);
+                bHasRpc = true;
             };
             client.OnPresenceUpdate += (sender, e) =>
             {
-                Console.WriteLine("[LOGRPC]: Received Update! {0}", e.Presence);
+                Console.WriteLine("[AVGL3Debug]: Recieved presence update from Discord.");
+            };
+            client.OnConnectionFailed += (sender, e) =>
+            {
+                bHasRpc = false;
             };
             client.Initialize();
             client.SetPresence(new RichPresence()
@@ -31,13 +38,32 @@ namespace AgsLauncherV3.Services
                     LargeImageKey = "ag2cover",
                     LargeImageText = "PD-Hana..BuildDate",
                     SmallImageKey = ""
+                },
+                Buttons = new DiscordRPC.Button[]
+                {
+                    new DiscordRPC.Button()
+                    {
+                        Label = "Download",
+                        Url = "https://trollface.dk"
+                        
+                    }
                 }
             });
-            client.UpdateStartTime(DateTime.UtcNow);
-            client.OnConnectionFailed += delegate (object sender, ConnectionFailedMessage e)
-            {
-                client.Dispose();
-            };
+            client.UpdateStartTime();
         }
+
+        public static void OnRichPresenceConnectionSuccess()
+        {
+            hp.UserName.Text = client.CurrentUser.Username;
+            hp.UserDiscrim.Text = "#" + client.CurrentUser.Discriminator.ToString("0000");
+        }
+
+        public static string GetPfpUrl()
+        {
+            return PfpUrl;
+        }
+
+        public static string PfpUrl;
+        public static bool bHasRpc;
     }
 }

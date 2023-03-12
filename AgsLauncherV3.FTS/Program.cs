@@ -6,11 +6,11 @@ using Microsoft.Toolkit.Uwp.Notifications;
 using Microsoft.Win32;
 using System.IO;
 
-namespace AgsLauncherV3.FTS
+namespace AveryGameLauncher3.FTS
 {
     internal class Program
     {
-        static string PATH = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\AveryGame\\AveryGameLauncher3";
+        static string PATH = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\AveryGameLauncher3";
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AgsLauncherV3.Services
+namespace AveryGameLauncher3.Services
 {
     internal class Enums
     {

@@ -1,45 +1,132 @@
-﻿<Page x:Class="AgsLauncherV3.HomePage"
+﻿<ui:UiPage x:Class="AveryGameLauncher3.HomePage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
       xmlns:gif="https://github.com/XamlAnimatedGif/XamlAnimatedGif"
-      xmlns:local="clr-namespace:AgsLauncherV3"
+      xmlns:local="clr-namespace:Destiny"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       FontFamily="./Data/Fonts/TrebuchetMS.ttf"
       Title="ChangelogPage">
-    <Grid Background="#383838">
-        <Border Background="#FF171717" BorderBrush="#FF171717" CornerRadius="0" Margin="0,0,0,285"/>
-        <Image Margin="0,0,0,285" Source="/Data/.Trim.png" Stretch="UniformToFill"/>
-        <Grid Name="contentHost" Opacity="1" Margin="0, 0, 0, 0">
-            <Frame x:Name="wowz2" NavigationUIVisibility="Hidden" Margin="0,172,0,0"/>
-            <Border BorderBrush="#262626" BorderThickness="1" HorizontalAlignment="Left" Height="330" Margin="24,100,0,0" VerticalAlignment="Top" Width="169" CornerRadius="9" Background="#262626">
-            </Border>
-            <Border Name="libraryHighlight" BorderThickness="1" HorizontalAlignment="Left" Height="26" Margin="30,110,0,0" VerticalAlignment="Top" Width="157" Background="#FFd91c5c" BorderBrush="#FFd91c5c" CornerRadius="7" Opacity="0"/>
-            <TextBlock Name="libraryButton" Margin="30,110,613,310" TextWrapping="Wrap" Text="libraryButton" Foreground="#FFC5C5C5" FontFamily="Segoe UI Variable Display Light" FontSize="18" HorizontalAlignment="Center" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave"/>
-            <Image Source="/Data/AveryGameLauncher3-LibraryIcon.png" Margin="34,110,736,314" RenderOptions.BitmapScalingMode="Fant"/>
-            <Grid Name="libraryCatalogHost" Margin="218,100,23,20">
-                <Border Name="libraryCatalogBackground" BorderBrush="#FF262626" BorderThickness="1" Background="#FF262626" CornerRadius="9"/>
+    <Border Background="Transparent" Margin="0, 0, 0, 0" CornerRadius="4">
+        <Grid Background="#383838">
+            <Border Background="#FF171717" BorderBrush="#FF171717" CornerRadius="0" Margin="0,0,0,285"/>
+            <Border x:Name="Container" Background="White" CornerRadius="8" Margin="38,78,31,30"/>
+            <Image Source="/Data/.Trim.png" Stretch="UniformToFill"/>
+            <Grid Name="contentHost" Opacity="1" Margin="0, 0, 0, 0">
+                <Border Name="CornerRadiusBorder" BorderBrush="#FF424f60" Background="Transparent" BorderThickness="1" CornerRadius="8" Margin="37,77,30,30" Visibility="Hidden">
+                    <Frame x:Name="wowz2" NavigationUIVisibility="Hidden" Foreground="#FF424F60">
+                        <Frame.Style>
+                            <Style TargetType="Frame">
+                                <Setter Property="OpacityMask">
+                                    <Setter.Value>
+                                        <VisualBrush Visual="{Binding ElementName=Container}"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Frame.Style>
+                    </Frame>
+                </Border>
 
+                <!--<Image Name="BugsDropShadowOutlined" Source="/Bugs.Outline.png" Margin="4,141,766,283" RenderOptions.BitmapScalingMode="Fant" Opacity="0">
+                    <Image.Effect>
+                        <DropShadowEffect BlurRadius="15" Direction="0" ShadowDepth="0" Color="#FF580061"/>
+                    </Image.Effect>
+                </Image>
+
+                <Image Name="ChangelogDropShadowOutlined" Source="/Changelog.Outline.png" Margin="4,175,766,249" RenderOptions.BitmapScalingMode="Fant" Opacity="0">
+                    <Image.Effect>
+                        <DropShadowEffect BlurRadius="15" Direction="0" ShadowDepth="0" Color="#FF580061"/>
+                    </Image.Effect>
+                </Image>
+                <Image Name="NewsDropShadowOutlined" Source="/News.Outline.png" Margin="4,209,766,215" RenderOptions.BitmapScalingMode="Fant" Opacity="0">
+                    <Image.Effect>
+                        <DropShadowEffect BlurRadius="15" Direction="0" ShadowDepth="0" Color="#FF580061"/>
+                    </Image.Effect>
+                </Image>
+                <Image Name="SettingsDropShadowOutlined" Source="/Settings.Outline.png" Margin="4,243,766,181" RenderOptions.BitmapScalingMode="Fant" Opacity="0">
+                    <Image.Effect>
+                        <DropShadowEffect BlurRadius="15" Direction="0" ShadowDepth="0" Color="#FF580061"/>
+                    </Image.Effect>
+                </Image>
+                <Image Name="BugsButton" Source="/Bugs.Outline.png" Margin="4,141,766,283" RenderOptions.BitmapScalingMode="Fant" MouseEnter="BugsButton_MouseEnter" MouseLeave="BugsButton_MouseLeave" MouseDown="BugsButton_MouseDown">
+                    <Image.Effect>
+                        <BlurEffect x:Name="bugsBlur" Radius="0" RenderingBias="Quality"/>
+                    </Image.Effect>
+
+                </Image>
+                <Image Name="ChangelogButton" Source="/Changelog.Outline.png" Margin="4,175,766,249" RenderOptions.BitmapScalingMode="Fant" MouseEnter="ChangelogButton_MouseEnter" MouseLeave="ChangelogButton_MouseLeave">
+                </Image>
+                <Image Name="NewsButton" Source="/News.Outline.png" Margin="4,209,766,215" RenderOptions.BitmapScalingMode="Fant" MouseEnter="NewsButton_MouseEnter" MouseLeave="NewsButton_MouseLeave">
+                </Image>
+                    <Image Name="SettingsButton" Source="/Settings.Outline.png" Margin="4,243,766,181" RenderOptions.BitmapScalingMode="Fant" MouseEnter="SettingsButton_MouseEnter" MouseLeave="SettingsButton_MouseLeave">
+                    </Image>-->
+                <ui:SymbolIcon Name="PlayButtonDropShadow" HorizontalAlignment="Left" Symbol="XboxController48" FontSize="26" Height="33" Margin="6,106,0,0" VerticalAlignment="Top" Width="31" Visibility="Visible" Opacity="0">
+                    <ui:SymbolIcon.Effect>
+                        <DropShadowEffect Color="#FF624788" BlurRadius="10" ShadowDepth="0" Direction="0" RenderingBias="Quality"/>
+                    </ui:SymbolIcon.Effect>
+                </ui:SymbolIcon>
+                <ui:SymbolIcon Name="BugsButtonDropShadow" HorizontalAlignment="Left" Symbol="Bug24" FontSize="26" Height="33" Margin="6,141,0,0" VerticalAlignment="Top" Width="31" Visibility="Visible" Opacity="0">
+                    <ui:SymbolIcon.Effect>
+                        <DropShadowEffect Color="#FF624788" BlurRadius="10" ShadowDepth="0" Direction="0" RenderingBias="Quality"/>
+                    </ui:SymbolIcon.Effect>
+                </ui:SymbolIcon>
+                <ui:SymbolIcon Name="ChangelogButtonDropShadow" HorizontalAlignment="Left" Symbol="News28" FontSize="26" Height="33" Margin="6,174,0,0" VerticalAlignment="Top" Width="31" Visibility="Visible" Opacity="0">
+                    <ui:SymbolIcon.Effect>
+                        <DropShadowEffect Color="#FF624788" BlurRadius="10" ShadowDepth="0" Direction="0" RenderingBias="Quality"/>
+                    </ui:SymbolIcon.Effect>
+                </ui:SymbolIcon>
+                <ui:SymbolIcon Name="NewsButtonDropShadow" HorizontalAlignment="Left" Symbol="DocumentText24" FontSize="26" Height="32" Margin="6,207,0,0" VerticalAlignment="Top" Width="30" Visibility="Visible" Opacity="0">
+                    <ui:SymbolIcon.Effect>
+                        <DropShadowEffect Color="#FF624788" BlurRadius="10" ShadowDepth="0" Direction="0" RenderingBias="Quality"/>
+                    </ui:SymbolIcon.Effect>
+                </ui:SymbolIcon>
+                <ui:SymbolIcon Name="SettingsButtonDropShadow" HorizontalAlignment="Left" Symbol="Settings32" FontSize="26" Height="32" Margin="7,242,0,0" VerticalAlignment="Top" Width="30" Visibility="Visible" Opacity="0">
+                    <ui:SymbolIcon.Effect>
+                        <DropShadowEffect Color="#FF624788" BlurRadius="10" ShadowDepth="0" Direction="0" RenderingBias="Quality"/>
+                    </ui:SymbolIcon.Effect>
+                </ui:SymbolIcon>
+                <ui:SymbolIcon Name="PlayButton" HorizontalAlignment="Left" Symbol="XboxController48" FontSize="26" Height="33" Margin="6,106,0,0" VerticalAlignment="Top" Width="31" Visibility="Visible"/>
+                <ui:SymbolIcon Name="BugsButton" HorizontalAlignment="Left" Symbol="Bug24" FontSize="26" Height="33" Margin="6,141,0,0" VerticalAlignment="Top" Width="31" Visibility="Visible" MouseEnter="BugsButton_MouseEnter" MouseLeave="BugsButton_MouseLeave" MouseDown="BugsButton_MouseDown"/>
+                <ui:SymbolIcon Name="ChangelogButton" HorizontalAlignment="Left" Symbol="News28" FontSize="26" Height="33" Margin="6,174,0,0" VerticalAlignment="Top" Width="31" Visibility="Visible"/>
+                <ui:SymbolIcon Name="NewsButton" HorizontalAlignment="Left" Symbol="DocumentText24" FontSize="26" Height="32" Margin="6,207,0,0" VerticalAlignment="Top" Width="30" Visibility="Visible"/>
+                <ui:SymbolIcon Name="SettingsButton" HorizontalAlignment="Left" Symbol="Settings32" FontSize="26" Height="32" Margin="7,242,0,0" VerticalAlignment="Top" Width="30" Visibility="Visible"/>
             </Grid>
-
-
-
+            <Image Source="/Data/.PunchOut.png" Margin="21,26,607,392" RenderOptions.BitmapScalingMode="Fant" Stretch="UniformToFill" Visibility="Hidden"/>
+            <Border x:Name="userImageHost" HorizontalAlignment="Left" Height="48" Margin="742,10,0,0" VerticalAlignment="Top" Width="48" CornerRadius="9, 9, 9, 9">
+                <Border.Background>
+                    <ImageBrush x:Name="userImage" Stretch="Fill" ImageSource="Data/AveryGameLauncher3-ProfileImageDefault.png" RenderOptions.BitmapScalingMode="Fant"/>
+                </Border.Background>
+            </Border>
+            <Grid/>
+            <TextBlock Name="userWelcome" HorizontalAlignment="Left"  Margin="198,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="539" Height="26" TextAlignment="Right" Foreground="#FFC7C7C7" FontSize="20" FontFamily="Trebuchet MS" FontWeight="Normal" FontStyle="Normal" TextDecorations="{x:Null}"><Run Name="UserName" Text=""></Run><Run Name="UserDiscrim" Text="" Foreground="#FF989898"></Run></TextBlock>
+            <!--Library: 0,102,0,0-->
+            <!--Bugs: 0,137,0,0-->
+            <!--Changelog: 0,170,0,0-->
+            <!--News: 0,205,0,0-->
+            <!--Settings: 0,239,0,0-->
+            <Border x:Name="PageIndicator" BorderThickness="1" BorderBrush="#FFD91C5C" HorizontalAlignment="Left" Height="34" Margin="0,102,0,0" CornerRadius="1" VerticalAlignment="Top" Width="2" RenderTransformOrigin="0.5,0.5">
+            </Border>
+            <Ellipse HorizontalAlignment="Left" RenderOptions.BitmapScalingMode="LowQuality" Height="10" Margin="5,5,0,0" Stroke="#df4744" Fill="#ff5f57" StrokeThickness="0.4" VerticalAlignment="Top" Width="10"/>
+            <Label x:Name="TrafficLightClose" Margin="6.7,5.6,759,427" Content="✕" FontWeight="Light" Foreground="#7e0508" FontSize="8" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
+            </Label>
+            <Ellipse HorizontalAlignment="Left" RenderOptions.BitmapScalingMode="LowQuality" Height="10" Margin="20,5,0,0" Stroke="#de9f36" Fill="#febc30" StrokeThickness="0.4" VerticalAlignment="Top" Width="10"/>
+            <Label x:Name="TrafficLightMinimize" Margin="8,3,775,419" Content="I" FontWeight="UltraLight" Foreground="#985712" FontSize="10" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Ellipse HorizontalAlignment="Left" RenderOptions.BitmapScalingMode="LowQuality" Height="10" Margin="5,5,0,0" Stroke="#df4744" StrokeThickness="0.4" VerticalAlignment="Top" Width="10"/>
+            <Ellipse HorizontalAlignment="Left" RenderOptions.BitmapScalingMode="LowQuality" Height="10" Margin="20,5,0,0" Stroke="#de9f36" StrokeThickness="0.4" VerticalAlignment="Top" Width="10"/>
+            <Border x:Name="TrafficLightCloseBorder" BorderBrush="Transparent" Background="Transparent" BorderThickness="1" HorizontalAlignment="Left" Height="10" Margin="5,5,0,0" VerticalAlignment="Top" Width="10" MouseEnter="TrafficLightGotFocus" MouseLeave="TrafficLightLostFocus" MouseUp="AppClose"/>
+            <Border x:Name="TrafficLightMinimizeBorder" BorderBrush="Transparent" Background="Transparent" BorderThickness="1" HorizontalAlignment="Left" Height="10" Margin="20,5,0,0" VerticalAlignment="Top" Width="10" MouseEnter="TrafficLightGotFocus" MouseLeave="TrafficLightLostFocus" MouseUp="AppMinimize"/>
         </Grid>
-        <Image Source="/Data/.PunchOut.png" Margin="21,24,607,394" RenderOptions.BitmapScalingMode="Fant" Stretch="UniformToFill"/>
-        <Border Margin="0,0,607,312" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" MouseDown="Button_Click" Background="#00000000" HorizontalAlignment="Right" Width="169" Height="28" VerticalAlignment="Bottom"/>
-        <Border x:Name="userImageHost" HorizontalAlignment="Left" Height="56" Margin="716,22,0,0" VerticalAlignment="Top" Width="56" CornerRadius="899,899,899,899">
-            <Border.Background>
-                <ImageBrush x:Name="userImage" Stretch="Fill" ImageSource="Data/AveryGameLauncher3-ProfileImageDefault.png" RenderOptions.BitmapScalingMode="Fant"/>
-            </Border.Background>
-        </Border>
-        <Grid Name="loaderHost" Opacity="0" Margin="69420, 69420, 69420, 69420">
-            <Border Name="contentLoaderBackground" Background="#FF262626"/>
-            <Image gif:AnimationBehavior.SourceUri="Data/AveryGameLauncher3-Load.gif"/>
-        </Grid>
-        <Grid/>
-        <TextBlock Name="userWelcome" HorizontalAlignment="Left" Margin="223,37,0,0" TextWrapping="Wrap" Text="userWelcome" VerticalAlignment="Top" Width="477" Height="26" TextAlignment="Right" Foreground="#FFC7C7C7" FontSize="20" FontFamily="Trebuchet MS" FontWeight="Normal" FontStyle="Normal" TextDecorations="{x:Null}">
-        </TextBlock>
-    </Grid>
-</Page>
+    </Border>
+</ui:UiPage>

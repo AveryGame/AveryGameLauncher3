@@ -1,17 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "riKxE4sW03ZcxL41B/DFcnNXJI5F/puttNQ1S4i52xTdQDoIqCDRjAXhLn0YYcBLgdnmpCjiAopaRQeop+JabA==",
+  "dgSpecHash": "e0KZvIKLRdNrO5saFUUxI1tom/uA5Q72iY049kq2f7jpdz2ZVPSr0Je05UsHDdD6J07Bhxk+XWRegXfe7oUshQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\shawn\\OneDrive\\Documents\\Visual Studio Projects\\ags-launcher-v3\\AgsLauncherV3\\AgsLauncherV3\\AgsLauncherV3.csproj",
+  "projectFilePath": "C:\\Users\\shawn\\OneDrive\\Documents\\Visual Studio Projects\\ags-launcher-v3\\AgsLauncherV3\\AgsLauncherV3\\AveryGameLauncher3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\shawn\\.nuget\\packages\\discordrichpresence\\1.0.175\\discordrichpresence.1.0.175.nupkg.sha512",
     "C:\\Users\\shawn\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\shawn\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
+    "C:\\Users\\shawn\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\shawn\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\shawn\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
     "C:\\Users\\shawn\\.nuget\\packages\\system.security.accesscontrol\\4.5.0\\system.security.accesscontrol.4.5.0.nupkg.sha512",
     "C:\\Users\\shawn\\.nuget\\packages\\system.security.principal.windows\\4.5.0\\system.security.principal.windows.4.5.0.nupkg.sha512",
-    "C:\\Users\\shawn\\.nuget\\packages\\xamlanimatedgif\\2.0.3\\xamlanimatedgif.2.0.3.nupkg.sha512",
-    "C:\\Users\\shawn\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.26\\microsoft.netcore.app.host.win-x64.3.1.26.nupkg.sha512"
+    "C:\\Users\\shawn\\.nuget\\packages\\wpf-ui\\2.0.3\\wpf-ui.2.0.3.nupkg.sha512",
+    "C:\\Users\\shawn\\.nuget\\packages\\xamlanimatedgif\\2.0.3\\xamlanimatedgif.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }
