@@ -39,6 +39,7 @@ namespace AveryGameLauncher3
             languageSetting = LocalizedLanguage.english;
             Delay(150);
             Console.WriteLine("LAUNCHER STATUS ENUM IS " + Services.Enums.status);
+            wowz2.Navigate(pp);
             switch (status)
             {
                 case LauncherStatus.initializing:
@@ -201,6 +202,26 @@ namespace AveryGameLauncher3
         private void AppMinimize(object sender, MouseButtonEventArgs e)
         {
             mw.WindowState = WindowState.Minimized;
+        }
+
+        private void DragBarHandle(object sender, MouseButtonEventArgs e)
+        {
+            if(e.LeftButton==MouseButtonState.Pressed){mw.DragMove();}
+        }
+
+        private void PlayButton_MouseEnter(object sender, MouseEventArgs e)
+        {
+            AnimationHandler.FadeIn(PlayButtonDropShadow, 0.3);
+        }
+
+        private void PlayButton_MouseLeave(object sender, MouseEventArgs e)
+        {
+            AnimationHandler.FadeOut(PlayButtonDropShadow, 0.3);
+        }
+
+        private void PlayButton_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 }

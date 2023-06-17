@@ -25,6 +25,8 @@
       <None Remove="Data\.Trim.png" />
       <None Remove="Data\AveryGameLauncher3-LibraryIcon.png" />
       <None Remove="Data\AveryGameLauncher3-Load.gif" />
+      <None Remove="Data\CoverArt\AG4.4Cover.png" />
+      <None Remove="Data\Debug\Placeholder\CoverPlaceholder.png" />
 	  <None Remove="Data\Exit.gif" />
 	  <None Remove="Data\Cover.gif" />
 	  <None Remove="Data\Fonts\TrebuchetMS.ttf" />
@@ -38,13 +40,15 @@
   </ItemGroup>
 
 	<ItemGroup>
-		<Resource Include="Bugs.Outline.png" />
-		<Resource Include="Changelog.Outline.png" />
+		<Resource Include="Data\Bugs.Outline.png" />
+		<Resource Include="Data\Changelog.Outline.png" />
 		<Resource Include="Data\AveryGameLauncher3-ProfileImageDefault.png" />
 		<Resource Include="Data\.PunchOut.png" />
 		<Resource Include="Data\.Trim.png" />
 		<Resource Include="Data\AveryGameLauncher3-LibraryIcon.png" />
 		<Resource Include="Data\AveryGameLauncher3-Load.gif" />
+		<Resource Include="Data\CoverArt\AG4.4Cover.png" />
+		<Resource Include="Data\Debug\Placeholder\CoverPlaceholder.png" />
 		<Resource Include="Data\Exit.gif" />
 		<Resource Include="Data\Cover.gif" />
 		<Resource Include="Data\Fonts\TrebuchetMS.ttf" />
@@ -52,9 +56,9 @@
 		<Resource Include="Data\AGLPDisplayEngine\AGLVF.ico" />
 		<Resource Include="Data\Icons\Bugs\Bugs.Fill.png" />
 		<Resource Include="Data\Icons\Bugs\Bugs.Outline.png" />
-		<Resource Include="Library.png" />
-		<Resource Include="News.Outline.png" />
-		<Resource Include="Settings.Outline.png" />
+		<Resource Include="Data\Library.png" />
+		<Resource Include="Data\News.Outline.png" />
+		<Resource Include="Data\Settings.Outline.png" />
 	</ItemGroup>
 
   <ItemGroup>

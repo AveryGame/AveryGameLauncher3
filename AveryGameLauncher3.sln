@@ -5,8 +5,6 @@ VisualStudioVersion = 17.2.32505.173
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AveryGameLauncher3", "AgsLauncherV3\AveryGameLauncher3.csproj", "{D3A2128D-3B32-4539-BBB3-5F11F206D323}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AveryGameLauncher3.FTS", "AgsLauncherV3.FTS\AveryGameLauncher3.FTS.csproj", "{B36F7B74-420E-4185-9C84-D9E524933183}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{D3A2128D-3B32-4539-BBB3-5F11F206D323}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3A2128D-3B32-4539-BBB3-5F11F206D323}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3A2128D-3B32-4539-BBB3-5F11F206D323}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B36F7B74-420E-4185-9C84-D9E524933183}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B36F7B74-420E-4185-9C84-D9E524933183}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B36F7B74-420E-4185-9C84-D9E524933183}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B36F7B74-420E-4185-9C84-D9E524933183}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

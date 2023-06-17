@@ -8,12 +8,8 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ChangelogPage">
 
-    <Grid Background="#FF171717">
-        <Grid Name="contentHost">
-            <Border Background="#FF171717" BorderBrush="#FF171717" CornerRadius="9999"/>
-            <Frame x:Name="wowzer" NavigationUIVisibility="Hidden"/>
-            <Label Content="changelog page" HorizontalAlignment="Left" Margin="411,142,0,0" VerticalAlignment="Top" Foreground="White"/>
-            <Button Content="Change window" HorizontalAlignment="Left" Margin="154,174,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        </Grid>
+    <Grid Background="#FF424f60">
+        <Label Content="changelog page" HorizontalAlignment="Left" Margin="411,142,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Button Content="Change window" HorizontalAlignment="Left" Margin="154,174,0,0" VerticalAlignment="Top" Click="Button_Click"/>
     </Grid>
 </Page>

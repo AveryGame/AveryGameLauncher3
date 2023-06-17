@@ -16,14 +16,13 @@ namespace AveryGameLauncher3.Services
     {
         public static void Append(LocalizedLanguage language)
         {
-            HomePage hp = new HomePage();
-            string languageData = File.ReadAllText("root/lang/" + language + ".json");
+            string languageData = File.ReadAllText("root/lang/" + language + ".agll");
             jsonFields lang = JsonConvert.DeserializeObject<jsonFields>(languageData);
         }
         public static void AppendRPCWelcome(string rpcName, LocalizedLanguage language)
         {
             HomePage hp = new HomePage();
-            string languageData = File.ReadAllText("root/lang/" + language + ".json");
+            string languageData = File.ReadAllText("root/lang/" + language + ".agll");
             jsonFields lang = JsonConvert.DeserializeObject<jsonFields>(languageData);
             hp.userWelcome.Text = lang.rpcWelcome + rpcName + "!";
         }

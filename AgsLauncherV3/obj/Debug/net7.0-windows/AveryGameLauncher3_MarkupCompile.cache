@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\shawn\OneDrive\Documents\Visual Studio Projects\ags-launcher-v3\AgsLauncherV3\AgsLauncherV3\App.xaml
-3-1886107330
+7-1060719202
 
-11-132727771
+15-1200943837
 2031163126483
-HomePage.xaml;MainWindow.xaml;Pages\ChangelogPage.xaml;
+HomePage.xaml;MainWindow.xaml;Pages\BugsPage.xaml;Pages\ChangelogPage.xaml;Pages\NewsPage.xaml;Pages\PlayPage.xaml;Pages\SettingsPage.xaml;
 
 False
 

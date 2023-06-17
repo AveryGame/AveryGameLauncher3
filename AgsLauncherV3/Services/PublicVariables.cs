@@ -9,5 +9,6 @@ namespace AveryGameLauncher3.Services
         public static MainWindow @mw;
         public static HomePage @hp;
         public static Pages.ChangelogPage @clp;
+        public static Pages.PlayPage @pp;
     }
 }

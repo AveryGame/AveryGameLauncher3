@@ -1,0 +1,48 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AveryGameLauncher3.Pages"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml" x:Class="AveryGameLauncher3.Pages.PlayPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="342" d:DesignWidth="731"
+      Title="PlayPage">
+
+    <Grid x:Name="MainHost" Background="#FF424f60">
+        <Border Name="Ag44CoverCard" Height="200" Width="150" Margin="70,108,511,34" BorderBrush="#FF424f60" CornerRadius="3">
+            <Border.Background>
+                <ImageBrush ImageSource="/Data/CoverArt/AG4.4Cover.png" Stretch="UniformToFill"/>
+            </Border.Background>
+        </Border>
+        <Border Name="AgCreditCoverCard" Height="200" Width="150" Margin="290,108,291,34" BorderBrush="#FF424f60" CornerRadius="3">
+            <Border.Background>
+                <ImageBrush ImageSource="/Data/Debug/Placeholder/CoverPlaceholder.png" Stretch="UniformToFill"/>
+            </Border.Background>
+        </Border>
+        <Border Name="Ag2CoverCard" Height="200" Width="150" Margin="511,108,70,34" BorderBrush="#FF424f60" CornerRadius="3">
+            <Border.Background>
+                <ImageBrush ImageSource="/Data/Debug/Placeholder/CoverPlaceholder.png" Stretch="UniformToFill"/>
+            </Border.Background>
+        </Border>
+        <Label x:Name="PlayPageWelcome" Content="Welcome to the AveryGame launcher!" FontSize="30" FontFamily="/Data/Fonts/#Trebuchet MS" HorizontalAlignment="Center" Height="38" Margin="0,30,0,0" VerticalAlignment="Top" Width="671"/>
+        <Label x:Name="PlayPageWelcome_Copy" Content="Here is where you can manage your game installs." FontSize="20" FontFamily="/Data/Fonts/#Trebuchet MS" HorizontalAlignment="Center" Height="28" Margin="0,62,0,0" VerticalAlignment="Top" Width="671"/>
+        <TextBlock x:Name="Ag44TextBlock" HorizontalAlignment="Left" Height="44" Margin="78,254,0,0" FontFamily="/Data/Fonts/#Trebuchet MS" FontSize="40" VerticalAlignment="Top" Width="136"><Run Text=" AG" Foreground="White"/><Run Text="4.4" Foreground="#FF7F7F7F"/></TextBlock>
+        <Label x:Name="Ag44TextCover" Content=" AG4.4" FontFamily="/Data/Fonts/#Trebuchet MS" HorizontalAlignment="Left" Height="46" FontSize="40" Margin="78,254,0,0" VerticalAlignment="Top" Width="136" Foreground="#FFAE00FF" Opacity="0">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="20" Direction="0" ShadowDepth="0" RenderingBias="Quality" Color="#FFAE00FF"/>
+            </Label.Effect>
+        </Label>
+        <Border x:Name="Ag44InstalledInteractionHandler" BorderBrush="Black" Background="Black" BorderThickness="1" HorizontalAlignment="Left" Height="200" Margin="70,108,0,0" VerticalAlignment="Top" Width="150" Opacity="0.0000001" MouseEnter="Ag44InstalledInteractionHandler_MouseEnter" MouseLeave="Ag44InstalledInteractionHandler_MouseLeave" MouseDown="Ag44InstalledInteractionHandler_MouseDown"/>
+        <Grid x:Name="Ag44UninstalledCover" Margin="70,108,511,34">
+            <Border BorderBrush="Black" Background="Black" BorderThickness="1" HorizontalAlignment="Center" Height="200" VerticalAlignment="Center" Width="150" Opacity="0.6" CornerRadius="3"/>
+            <!--wpf fucking SUCKS-->
+            <Label x:Name="Ag44NotInstalledNoticeL1" Content="Avery Game" HorizontalAlignment="Center" Height="28" FontFamily="/Data/Fonts/#Trebuchet MS" FontSize="20" Margin="0,25,0,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="130" Foreground="White"/>
+            <Label x:Name="Ag44NotInstalledNoticeL2" Content="4.4 is not" HorizontalAlignment="Center" Height="28" FontFamily="/Data/Fonts/#Trebuchet MS" FontSize="20" Margin="0,45,0,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="130" Foreground="White"/>
+            <Label x:Name="Ag44NotInstalledNoticeL3" Content="installed!" HorizontalAlignment="Center" Height="28" FontFamily="/Data/Fonts/#Trebuchet MS" FontSize="20" Margin="0,65,0,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="130" Foreground="White"/>
+            <ui:Button x:Name="Ag44InstallButton" Content="Install" FontFamily="/Data/Fonts/#Trebuchet MS" FontSize="22" Height="37" Margin="0,100,0,0" VerticalAlignment="Top" Width="110" HorizontalAlignment="Center"/>
+        </Grid>
+
+
+    </Grid>
+</Page>

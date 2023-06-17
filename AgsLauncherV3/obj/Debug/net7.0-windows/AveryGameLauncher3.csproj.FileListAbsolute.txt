@@ -27,3 +27,11 @@ C:\Users\shawn\OneDrive\Documents\Visual Studio Projects\ags-launcher-v3\AgsLaun
 C:\Users\shawn\OneDrive\Documents\Visual Studio Projects\ags-launcher-v3\AgsLauncherV3\AgsLauncherV3\obj\Debug\net7.0-windows\refint\AveryGameLauncher3.dll
 C:\Users\shawn\OneDrive\Documents\Visual Studio Projects\ags-launcher-v3\AgsLauncherV3\AgsLauncherV3\obj\Debug\net7.0-windows\AveryGameLauncher3.genruntimeconfig.cache
 C:\Users\shawn\OneDrive\Documents\Visual Studio Projects\ags-launcher-v3\AgsLauncherV3\AgsLauncherV3\obj\Debug\net7.0-windows\ref\AveryGameLauncher3.dll
+C:\Users\shawn\OneDrive\Documents\Visual Studio Projects\ags-launcher-v3\AgsLauncherV3\AgsLauncherV3\obj\Debug\net7.0-windows\Pages\PlayPage.g.cs
+C:\Users\shawn\OneDrive\Documents\Visual Studio Projects\ags-launcher-v3\AgsLauncherV3\AgsLauncherV3\obj\Debug\net7.0-windows\Pages\PlayPage.baml
+C:\Users\shawn\OneDrive\Documents\Visual Studio Projects\ags-launcher-v3\AgsLauncherV3\AgsLauncherV3\obj\Debug\net7.0-windows\Pages\BugsPage.g.cs
+C:\Users\shawn\OneDrive\Documents\Visual Studio Projects\ags-launcher-v3\AgsLauncherV3\AgsLauncherV3\obj\Debug\net7.0-windows\Pages\NewsPage.g.cs
+C:\Users\shawn\OneDrive\Documents\Visual Studio Projects\ags-launcher-v3\AgsLauncherV3\AgsLauncherV3\obj\Debug\net7.0-windows\Pages\SettingsPage.g.cs
+C:\Users\shawn\OneDrive\Documents\Visual Studio Projects\ags-launcher-v3\AgsLauncherV3\AgsLauncherV3\obj\Debug\net7.0-windows\Pages\BugsPage.baml
+C:\Users\shawn\OneDrive\Documents\Visual Studio Projects\ags-launcher-v3\AgsLauncherV3\AgsLauncherV3\obj\Debug\net7.0-windows\Pages\NewsPage.baml
+C:\Users\shawn\OneDrive\Documents\Visual Studio Projects\ags-launcher-v3\AgsLauncherV3\AgsLauncherV3\obj\Debug\net7.0-windows\Pages\SettingsPage.baml

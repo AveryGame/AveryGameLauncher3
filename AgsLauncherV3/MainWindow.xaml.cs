@@ -3,11 +3,9 @@ using System;
 using System.Windows;
 using System.Runtime.InteropServices;
 using System.Reflection;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Security.Principal;
 using System.IO;
 using System.Windows.Interop;
+using Newtonsoft.Json.Linq;
 
 namespace AveryGameLauncher3
 {
@@ -32,9 +30,10 @@ namespace AveryGameLauncher3
             var preference = DWM_WINDOW_CORNER_PREFERENCE.DWMWCP_ROUND;
             DwmSetWindowAttribute(hWnd, attribute, ref preference, sizeof(uint));
             InitializeComponent();
-            if (Environment.GetCommandLineArgs()[1] == "--devrunnerstate.1")
+            if (!string.IsNullOrWhiteSpace(Environment.GetCommandLineArgs()[1]) && Environment.GetCommandLineArgs()[1] == "--devrunnerstate.1")
             {
                 AllocConsole();
+                RunDeveloperBuildEvents();
                 Console.WriteLine("AveryGameLauncher3.App//Hana..Bootstrap() -- Allocated console at " + DateTime.Now.ToString());
             }
             Services.Enums.status = Services.Enums.LauncherStatus.initializing;
@@ -51,6 +50,7 @@ namespace AveryGameLauncher3
         }
         public void AssignVars()
         {
+            @pp = new Pages.PlayPage();
             @hp = new HomePage();
             @clp = new Pages.ChangelogPage();
             @mw = this;
@@ -59,6 +59,16 @@ namespace AveryGameLauncher3
         {
             this.RemoveLogicalChild(hp);
             this.RemoveLogicalChild(clp);
+        }
+        public void RunDeveloperBuildEvents()
+        {
+            JObject rss = JObject.Parse(File.ReadAllText("../../../Build.agdev"));
+            int IncrementedBuildNumber = int.Parse(rss["BuildNumber"].ToString());
+            IncrementedBuildNumber++;
+            rss["BuildNumber"] = IncrementedBuildNumber;
+            File.WriteAllText("../../../Build.agdev", rss.ToString());
+            hp.DevInfLabel.Content = $"{rss["Version"].ToString()} Build {IncrementedBuildNumber} | Flags: {rss["VersionFlags"].ToString()}";
+
         }
 
         // The enum flag for DwmSetWindowAttribute's second parameter, which tells the function what attribute to set.

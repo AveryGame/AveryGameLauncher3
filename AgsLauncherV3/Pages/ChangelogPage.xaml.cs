@@ -21,21 +21,6 @@ namespace AveryGameLauncher3.Pages
     {
         public ChangelogPage()
         {
-            HomePage mw = new HomePage();
-            InitializeComponent();
-            this.ShowsNavigationUI = false;
-            var b = contentHost;
-            var fade = new DoubleAnimation()
-            {
-                From = 0,
-                To = 1,
-                Duration = TimeSpan.FromSeconds(0.15),
-            };
-            Storyboard.SetTarget(fade, b);
-            Storyboard.SetTargetProperty(fade, new PropertyPath(Button.OpacityProperty));
-            var sb = new Storyboard();
-            sb.Children.Add(fade);
-            sb.Begin();
             /*ThicknessAnimation contenthostMargin = new ThicknessAnimation();
             contenthostMargin.From = new Thickness(-900, 0, 900, 0);
             contenthostMargin.To = new Thickness(0, 0, 0, 0);

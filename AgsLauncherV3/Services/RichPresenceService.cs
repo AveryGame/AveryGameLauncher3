@@ -54,8 +54,7 @@ namespace AveryGameLauncher3.Services
 
         public static void OnRichPresenceConnectionSuccess()
         {
-            hp.UserName.Text = client.CurrentUser.Username;
-            hp.UserDiscrim.Text = "#" + client.CurrentUser.Discriminator.ToString("0000");
+            hp.UserName.Text = "@" + client.CurrentUser.Username;
         }
 
         public static string GetPfpUrl()
